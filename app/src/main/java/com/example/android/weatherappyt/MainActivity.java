@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String apiKey = "e527e5eb3f3ae6652d8ce315e87f8cfc";
+                String apiKey = "YOUR_API_KEY";
                 String city = editText.getText().toString();
                 String url = "https://api.openweathermap.org/data/2.5/weather?q="+ city +"&appid=" + apiKey;
                 RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
