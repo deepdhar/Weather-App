@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // api from https://openweathermap.org/
                 String apiKey = "YOUR_API_KEY";
                 String city = editText.getText().toString();
                 String url = "https://api.openweathermap.org/data/2.5/weather?q="+ city +"&appid=" + apiKey;
