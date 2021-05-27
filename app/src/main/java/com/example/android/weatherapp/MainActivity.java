@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void findWeather() {
-        String apiKey = "4ebddb9e5d7ab62c4abd38ed54c920bc";
+        String apiKey = "YOUR API KEY";
         String city = cityEditText.getText().toString();
         String url = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey;
 
