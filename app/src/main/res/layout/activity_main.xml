@@ -1,213 +1,243 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
+    android:background="@drawable/sunny_bg"
+    android:gravity="bottom"
     android:orientation="vertical"
-    android:padding="15dp"
-    tools:context=".MainActivity">
+    android:id="@+id/home_linearLayout">
 
-    <RelativeLayout
-        android:id="@+id/top_relativeLayout"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/city_textView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
+        android:drawablePadding="5dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Delhi"
+        android:textColor="#222B61"
+        android:textSize="19sp"
+        android:layout_marginVertical="25dp"
+        android:paddingHorizontal="18dp"
+        app:drawableStartCompat="@drawable/ic_location" />
 
-        <TextView
-            android:id="@+id/date_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:text="Monday"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/city_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:text="New Delhi"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
-
-    </RelativeLayout>
+    <ImageView
+        android:id="@+id/weather_icon"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.35"
+        android:paddingVertical="15dp"
+        android:src="@drawable/sunny" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/top_relativeLayout"
-        android:layout_marginTop="40dp"
-        android:orientation="vertical">
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingVertical="15dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="0dp"
-                android:fontFamily="sans-serif"
-                android:text="Day "
-                android:textColor="#c9c3cb"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/day_temp_textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="0dp"
-                android:fontFamily="sans-serif"
-                android:text="30°↑"
-                android:textColor="#c9c3cb"
-                android:textSize="18sp" />
-
-            <Space
-                android:layout_width="8dp"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="0dp"
-                android:fontFamily="sans-serif"
-                android:text="|"
-                android:textColor="#c9c3cb"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <Space
-                android:layout_width="8dp"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="0dp"
-                android:fontFamily="sans-serif"
-                android:text="Night "
-                android:textColor="#c9c3cb"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/night_temp_textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="0dp"
-                android:fontFamily="sans-serif"
-                android:text="20°↓"
-                android:textColor="#c9c3cb"
-                android:textSize="18sp" />
-
-        </LinearLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="130dp">
-
-            <RelativeLayout
-                android:id="@+id/rl1"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_centerVertical="true">
-
-                <TextView
-                    android:id="@+id/temp_textView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-medium"
-                    android:text="30"
-                    android:textColor="@color/white"
-                    android:textSize="110sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="28sp"
-                    android:layout_toRightOf="@id/temp_textView"
-                    android:fontFamily="sans-serif-medium"
-                    android:text="°C"
-                    android:textColor="@color/white"
-                    android:textSize="40sp"
-                    android:textStyle="bold" />
-
-            </RelativeLayout>
-
-            <ImageView
-                android:id="@+id/weather_icon"
-                android:layout_width="120dp"
-                android:layout_height="match_parent"
-                android:layout_alignParentEnd="true"
-                android:paddingHorizontal="15dp"
-                android:src="@drawable/sunny" />
-
-        </RelativeLayout>
-
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="0dp"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:text="Feels like "
-                android:textColor="@color/white"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/feelsLike_textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:text="30°"
-                android:textColor="@color/white"
-                android:textSize="18sp" />
-
-        </LinearLayout>
-
+        <!--        Sunny, Rainy, Cold-->
         <TextView
             android:id="@+id/weather_type_textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:fontFamily="sans-serif-condensed-medium"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-medium"
             android:text="Sunny"
-            android:textColor="#c9c3cb"
+            android:textColor="#222B61"
+            android:textSize="22sp" />
+
+        <!--        temperature-->
+        <RelativeLayout
+            android:id="@+id/temp_relativeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/temp_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-thin"
+                android:text="30"
+                android:textColor="#222B61"
+                android:textSize="90sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:layout_toRightOf="@id/temp_textView"
+                android:fontFamily="sans-serif-medium"
+                android:text="°C"
+                android:textColor="#222B61"
+                android:textSize="40sp" />
+
+        </RelativeLayout>
+
+        <!-- weather description -->
+        <TextView
+            android:id="@+id/desc_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="clear sky"
+            android:textColor="#222B61"
             android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textStyle="italic" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal"
+            android:paddingHorizontal="18dp">
+
+            <!--wind speed-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:background="@drawable/card_bg"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/wind_speed_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="2 km/h"
+                    android:textColor="#222B61"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginVertical="15dp"
+                    android:src="@drawable/wind_speed_card" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="wind speed"
+                    android:textColor="#222B61"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <!--humidity-->
+            <LinearLayout
+                android:layout_width="1dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/card_bg"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/humidity_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="79%"
+                    android:textColor="#222B61"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginVertical="15dp"
+                    android:src="@drawable/humidity_card" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="humidity"
+                    android:textColor="#222B61"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <!--visibility-->
+            <LinearLayout
+                android:layout_width="1dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/card_bg"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/visibility_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="4.0 km"
+                    android:textColor="#222B61"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginVertical="15dp"
+                    android:src="@drawable/visibility_card" />
+
+                <TextView
+                    android:id="@+id/humidity_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="visibility"
+                    android:textColor="#222B61"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
 
     </LinearLayout>
 
-    <EditText
-        android:id="@+id/city_editText"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
         android:layout_marginHorizontal="10dp"
-        android:layout_marginTop="300dp"
-        android:hint="Enter city name"
-        android:padding="10dp"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:layout_above="@id/citySearch_button"/>
+        android:layout_marginBottom="19dp">
 
-    <Button
-        android:id="@+id/citySearch_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginHorizontal="10dp"
-        android:backgroundTint="#652472"
-        android:text="Search"
-        android:textAllCaps="false"
-        android:layout_marginBottom="25dp"/>
+        <EditText
+            android:id="@+id/city_editText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:background="@drawable/card_bg"
+            android:hint="Enter city name"
+            android:padding="10dp"
+            android:textColorHint="#222B61"
+            android:layout_marginRight="8dp"
+            android:textSize="16sp" />
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/citySearch_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:background="@drawable/button_bg"
+            android:text="Search"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
